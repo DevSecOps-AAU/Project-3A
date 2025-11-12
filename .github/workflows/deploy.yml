@@ -1,8 +1,11 @@
 name: Test Runner
 
+# Trigger manually or on push to main
 on:
-  workflow_dispatch:
-  
+  push:
+    branches: [ main ]
+  workflow_dispatch:  # optional: allows manual trigger
+
 jobs:
   test:
     runs-on: [self-hosted, Linux, X64]
